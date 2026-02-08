@@ -72,6 +72,19 @@ h3 { font-size: 1.25rem; margin-bottom: 0.85rem; }
 .project-card .tech { font-size:0.85rem; color:var(--muted); }
 .project-card a { display:inline-block; margin-top:0.5rem; text-decoration:none; color:var(--accent-2); font-weight:700; }
 
+.projects-header { display:flex; justify-content:space-between; align-items:center; gap:1rem; margin-bottom:1.5rem; flex-wrap:wrap; }
+.projects-header h3 { margin:0; }
+
+.project-toggle { display:flex; gap:0.5rem; }
+.toggle-btn { background:transparent; border:2px solid var(--accent-2); color:var(--accent-2); padding:0.5rem 1rem; border-radius:8px; font-weight:700; cursor:pointer; transition:all 0.3s ease; font-family:"Inter", system-ui, -apple-system, "Segoe UI", Roboto; }
+.toggle-btn:hover { background:rgba(155,231,214,0.1); }
+.toggle-btn.active { background:var(--accent-2); color:#fff; }
+
+.project-section { display:none; animation:fadeIn 0.3s ease; }
+.project-section.active { display:block; }
+
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
 .contact-links { display:flex; gap:1rem; margin-top:0.5rem; }
 .contact-links a { text-decoration:none; color:var(--accent-2); font-weight:700; }
 

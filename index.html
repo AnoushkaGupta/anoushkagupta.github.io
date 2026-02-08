@@ -36,7 +36,7 @@
           </p>
           <p class="cta-row">
             <a class="btn" href="#projects">See Projects</a>
-            <a class="btn ghost" href="mailto:your.email@example.com">Email me</a>
+            <a class="btn ghost" href="mailto:your.email@example.com">Get in Touch!</a>
           </p>
         </div>
       </div>
@@ -66,37 +66,79 @@
 
     <!-- Projects -->
     <section id="projects">
-      <h3>Personal Projects</h3>
-
-      <div class="project-grid">
-        <div class="project-card">
-          <h4>📊 Data Pipeline Reliability Dashboard</h4>
-          <p>
-            Built an end-to-end pipeline monitoring dashboard using Python and SQL
-            to track failures, latency, and data freshness across workflows.
-          </p>
-          <p class="tech">Python • SQL • Airflow • Analytics</p>
-          <a href="#" target="_blank">View Project →</a>
+      <div class="projects-header">
+        <h3>Personal Projects</h3>
+        <div class="project-toggle">
+          <button class="toggle-btn active" data-category="technical">Technical Projects</button>
+          <button class="toggle-btn" data-category="fun">Fun Side Quests</button>
         </div>
+      </div>
 
-        <div class="project-card">
-          <h4>🌱 Environmental Data Analysis</h4>
-          <p>
-            Analyzed large public environmental datasets to identify trends and
-            patterns related to climate indicators using reproducible data workflows.
-          </p>
-          <p class="tech">Python • Pandas • Data Visualization</p>
-          <a href="#" target="_blank">View Project →</a>
+      <div id="technical-projects" class="project-section active">
+        <div class="project-grid">
+          <div class="project-card">
+            <h4>📊 Data Pipeline Reliability Dashboard</h4>
+            <p>
+              Built an end-to-end pipeline monitoring dashboard using Python and SQL
+              to track failures, latency, and data freshness across workflows.
+            </p>
+            <p class="tech">Python • SQL • Airflow • Analytics</p>
+            <a href="#" target="_blank">View Project →</a>
+          </div>
+
+          <div class="project-card">
+            <h4>🌱 Environmental Data Analysis</h4>
+            <p>
+              Analyzed large public environmental datasets to identify trends and
+              patterns related to climate indicators using reproducible data workflows.
+            </p>
+            <p class="tech">Python • Pandas • Data Visualization</p>
+            <a href="#" target="_blank">View Project →</a>
+          </div>
+
+          <div class="project-card">
+            <h4>🔁 Survey Data ETL System</h4>
+            <p>
+              Designed an automated ETL process that cleans, transforms, and loads
+              survey data into analytics-ready tables.
+            </p>
+            <p class="tech">ETL • SQL • Automation</p>
+            <a href="#" target="_blank">View Project →</a>
+          </div>
         </div>
+      </div>
 
-        <div class="project-card">
-          <h4>🔁 Survey Data ETL System</h4>
-          <p>
-            Designed an automated ETL process that cleans, transforms, and loads
-            survey data into analytics-ready tables.
-          </p>
-          <p class="tech">ETL • SQL • Automation</p>
-          <a href="#" target="_blank">View Project →</a>
+      <div id="fun-projects" class="project-section">
+        <div class="project-grid">
+          <div class="project-card">
+            <h4>🎮 Fantasy Stats Tracker</h4>
+            <p>
+              Built a web app to track fantasy sports performance with real-time stats,
+              rankings, and predictions using APIs and interactive dashboards.
+            </p>
+            <p class="tech">JavaScript • React • APIs</p>
+            <a href="#" target="_blank">View Project →</a>
+          </div>
+
+          <div class="project-card">
+            <h4>🍕 Recipe Recommender Bot</h4>
+            <p>
+              Created a fun Discord bot that suggests recipes based on ingredients
+              you have on hand, with nutritional info and difficulty ratings.
+            </p>
+            <p class="tech">Python • Discord.py • Web Scraping</p>
+            <a href="#" target="_blank">View Project →</a>
+          </div>
+
+          <div class="project-card">
+            <h4>🎵 Playlist Generator</h4>
+            <p>
+              Developed a tool that generates Spotify playlists based on mood,
+              energy level, and listening history using music API integrations.
+            </p>
+            <p class="tech">Python • Spotify API • Machine Learning</p>
+            <a href="#" target="_blank">View Project →</a>
+          </div>
         </div>
       </div>
     </section>
@@ -119,5 +161,29 @@
   <footer>
     <p>© 2026 Anoushka Gupta</p>
   </footer>
+
+  <script>
+    document.querySelectorAll('.toggle-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const category = button.getAttribute('data-category');
+        
+        // Remove active class from all buttons
+        document.querySelectorAll('.toggle-btn').forEach(btn => {
+          btn.classList.remove('active');
+        });
+        
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        // Hide all project sections
+        document.querySelectorAll('.project-section').forEach(section => {
+          section.classList.remove('active');
+        });
+        
+        // Show the selected section
+        document.getElementById(category + '-projects').classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>
