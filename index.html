@@ -451,7 +451,6 @@
     /* =============================================
        PROJECTS SECTION
        ============================================= */
-    #projects {}
 
     /* Tab navigation */
     .tab-nav {
@@ -509,6 +508,7 @@
       background: linear-gradient(135deg, rgba(92,138,88,0.06) 0%, transparent 60%);
       opacity: 0;
       transition: opacity 0.3s;
+      pointer-events: none;
     }
 
     .project-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px var(--shadow); }
@@ -976,28 +976,15 @@
         <div class="projects-grid">
 
           <div class="project-card reveal">
-            <span class="project-emoji">🛠</span>
-            <h3>Internal DevOps Dashboard</h3>
-            <p>A real-time operations dashboard that consolidated 6 separate monitoring tools into one clean interface, cutting incident response time by 40%.</p>
+            <span class="project-emoji">🌵</span>
+            <h3>Cactus</h3>
+            <p>An Android app built for the Dandilyon SEEDS 2021 Program to help Gen Z build sustainable habits — a lifestyle quiz, educational content, and weekly progress tracking to reduce individual carbon footprints.</p>
             <div class="project-tags">
-              <span class="tag">React</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">WebSockets</span>
-              <span class="tag">Docker</span>
+              <span class="tag">Kotlin</span>
+              <span class="tag">Android</span>
+              <span class="tag">Room</span>
             </div>
-            <a href="#" class="project-link">View project →</a>
-          </div>
-
-          <div class="project-card reveal">
-            <span class="project-emoji">🔐</span>
-            <h3>API Gateway Toolkit</h3>
-            <p>Lightweight auth middleware and rate-limiting library that plugs into any Express app. Used in production by 3 teams.</p>
-            <div class="project-tags">
-              <span class="tag">TypeScript</span>
-              <span class="tag">Express</span>
-              <span class="tag">Redis</span>
-            </div>
-            <a href="#" class="project-link">View project →</a>
+            <a href="https://github.com/hang-m-cao/seeds" class="project-link" target="_blank" rel="noopener">View on GitHub →</a>
           </div>
 
         </div>
@@ -1007,31 +994,6 @@
       <div class="tab-panel" id="tab-datascience">
         <div class="projects-grid">
 
-          <div class="project-card reveal">
-            <span class="project-emoji">📈</span>
-            <h3>Churn Prediction Model</h3>
-            <p>Gradient boosting model achieving 87% precision on predicting customer churn 60 days in advance, deployed as a REST API.</p>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">scikit-learn</span>
-              <span class="tag">XGBoost</span>
-              <span class="tag">FastAPI</span>
-            </div>
-            <a href="#" class="project-link">View project →</a>
-          </div>
-
-          <div class="project-card reveal">
-            <span class="project-emoji">💬</span>
-            <h3>NLP Feedback Classifier</h3>
-            <p>Fine-tuned a BERT model to categorize open-ended survey responses into actionable themes, saving 20+ hours/month of manual tagging.</p>
-            <div class="project-tags">
-              <span class="tag">HuggingFace</span>
-              <span class="tag">PyTorch</span>
-              <span class="tag">Streamlit</span>
-            </div>
-            <a href="#" class="project-link">View project →</a>
-          </div>
-
         </div>
       </div>
 
@@ -1039,17 +1001,6 @@
       <div class="tab-panel" id="tab-fun">
         <div class="projects-grid">
 
-          <div class="project-card reveal">
-            <span class="project-emoji">☕</span>
-            <h3>Coffee Journal CLI</h3>
-            <p>A terminal app for tracking brews, grind sizes, and tasting notes. Generates a weekly "flavor report" from your logs.</p>
-            <div class="project-tags">
-              <span class="tag">Rust</span>
-              <span class="tag">SQLite</span>
-              <span class="tag">CLI</span>
-            </div>
-            <a href="#" class="project-link">View on GitHub →</a>
-          </div>
 
         </div>
       </div>
